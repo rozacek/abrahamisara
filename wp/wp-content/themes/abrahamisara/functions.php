@@ -144,11 +144,11 @@ add_action( 'widgets_init', 'abrahamisara_widgets_init' );
  */
 function abrahamisara_scripts() {
 	wp_enqueue_style( 'abrahamisara-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'abrahamisara-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'abrahamisara-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	wp_enqueue_script( 'abrahamisara-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), _S_VERSION, true );
+	// modified according to https://stevepolito.design/blog/create-a-bootstrap-theme-for-wordpress/
+	wp_enqueue_script( 'wordpress-bootstrap-starter-theme-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'wordpress-bootstrap-starter-theme-vendor-scripts', get_template_directory_uri() . '/assets/js/vendor.min.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'wordpress-bootstrap-starter-theme-custom-scripts', get_template_directory_uri() . '/assets/js/custom.min.js', array('customize-preview'), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
