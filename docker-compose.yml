@@ -5,7 +5,7 @@ services:
     container_name: wordpress
     restart: always
     volumes:
-      - ./wp-content:/var/www/html/wp-content
+      - ./wp:/var/www/html/
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_NAME: db
