@@ -1,0 +1,19 @@
+{
+  "name": "abrahamisara",
+  "version": "1.0.0",
+  "description": "blog Stowarzyszenia Abraham i Sara",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rozacek/abrahamisara.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rozacek/abrahamisara/issues"
+  },
+  "homepage": "https://github.com/rozacek/abrahamisara#readme"
+}
